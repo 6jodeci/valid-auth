@@ -3,11 +3,13 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/http"
 	"strings"
 )
 
 func main() {
+	log.Println("server is running on port :8081")
 	http.HandleFunc("/registrations", registrationsHandler)
 	http.HandleFunc("/authentications", authenticationsHandler)
 	http.HandleFunc("/test", testResponceHandler)
